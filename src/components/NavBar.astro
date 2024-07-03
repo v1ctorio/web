@@ -1,0 +1,105 @@
+--- 
+interface Link {
+    name: string;
+    url: string;
+}
+const links: Link[] = [
+    { name: '~', url: '/' },
+    { name: '~/Dev', url: '/Dev' },
+    { name: '~/Posts', url: '/Posts' },
+    //{ name: '~/Prjcts', url: '/Prjcts' },
+    //{ name: '~/Nix', url: '/Nix' },
+    //{ name: '~/Pics', url: '/Pics' },
+];
+---
+
+<nav>
+    <div class="navbar">
+        <div class="links">
+            <p class="logo">Vic</p>
+            {links.map((i)=> 
+            <a class="link" href={i.url}>{i.name}</a>
+            )}
+        </div>
+
+        <div class="socials">
+            <a href="github.com/v1ctorio">
+                <img src="/github-mark.png" alt="GitHub">
+            </a>
+        </div>
+    </div>
+</nav>
+
+<style>
+
+
+nav {
+    top: 0;
+    left: 0;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px;
+  backdrop-filter: blur(20px) saturate(1.8);
+}
+
+.navbar {
+  max-width: 6xl;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.links p {
+    display: inline;
+}
+
+.links p,
+.links a,
+.socials a {
+    margin-right: 9px;
+}
+.links a:last-child,
+.socials a:last-child
+{
+    margin-right: 0px;
+}
+
+    .logo {
+        margin-left: auto;
+        font-size: 1.5em;
+
+    }
+
+    .link {
+        font-size: 1.2em;
+    }
+
+
+    .socials img {
+        height: 30px;
+    }
+    .logo {
+        font-size: 1.5rem;
+        color: black;
+    }
+
+    a {
+        text-decoration: none;
+        color: #332424;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        a {
+            color: #505050;
+        }
+        .logo {
+            color: aliceblue;
+        }
+    }
+</style>

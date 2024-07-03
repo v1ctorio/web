@@ -1,0 +1,39 @@
+---
+const { frontmatter } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{frontmatter.title}</title>
+</head>
+<body>
+
+    <slot/>
+    <code><a href="/">cd ..</a></code>
+</body>
+<style>
+    code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+        font-size: 0.9em;
+        background-color: #f4f4f4;
+        padding: 5px;
+        border-radius: 5px;
+        display: inline-block;
+
+	}
+    a {
+        letter-spacing: -1.5px;
+        text-decoration: none;
+    }
+</style>
+</html>

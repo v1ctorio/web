@@ -11,12 +11,26 @@ import Layout from '../layouts/Layout.astro';
     <p>
             Here you can find my public stuff (mostly about development). 
     </p>
+    <div class="projects">
         <Card 
         title="NixOS flake"
         description="My NixOS flake, the configuration for the systems that I daily use, desktop (nosesisaid) and a laptop(alum)."
         img="https://cloud-qyit5przc-hack-club-bot.vercel.app/0image.png"
         link="https://github.com/v1ctorio/nosesisaido"
         />
+        <Card 
+        title="Fumo-API"
+        description="Rest API of images of fumos (japanese plushies) using typescript and fastify."
+        img="https://repository-images.githubusercontent.com/395606928/753b9fdd-b978-4b74-841e-f3973daf9129"
+        link="https://github.com/Nosesisaid/fumo-API"
+        />
+        <Card
+        title="LIFX-Admin"
+        description="Discord bot to control LIFX lights through Discord."
+        img="https://github.com/v1ctorio/lifx-admin/blob/main/assets/login%20lifxbot.gif?raw=true"
+        link="https://github.com/v1ctorio/lifx-admin"
+        />
+    </div>
 		</div>
 	</main>
 </div>
@@ -48,5 +62,12 @@ import Layout from '../layouts/Layout.astro';
 		text-decoration: none;
 		color: rgb(2, 132, 199);
 	}
+    .projects {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        
+    }
 
 </style>

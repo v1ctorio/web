@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/PostLayout.astro
+layout: ../../layouts/ArticleLayout.astro
 title: 'Hello Chat!'
 pubDate: 03-06-2024
 description: 'This is the first post of my blog.'

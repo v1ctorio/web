@@ -1,0 +1,62 @@
+---
+//const allPosts:Post[] = await fetch('https://localhost:8080/posts').then((res) => res.json());
+import Layout from '../layouts/Layout.astro';
+interface Post {
+    title: string;
+    pubDate: string;
+    url: string;
+}
+---
+
+<Layout title="Vic.">
+	<div>
+	<main>
+		<h1>~/posts</h1>
+    <div class="postsbox">
+        <div class="post">
+            <p class="content">CONTENIDO</p>
+            <p class="date">fecha</p>
+        </div>
+		</div>
+	</main>
+</div>
+</Layout>
+
+<style>
+	.strike {
+		text-decoration: line-through;
+	}
+	main {
+		margin-top: 60px;
+		justify-content: center;
+		flex-direction: column;
+		max-width: 65ch;
+		width: 100%;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	h1 {
+		padding: 10px 0px 10px 0px;
+		font-size: 50px;
+	}
+	p {
+		padding-top: 10px ;
+	}
+	.posts {
+        width: 100%;
+    }
+	.post {
+        padding: 2rem;
+        padding-top: 0rem;
+        padding-bottom: 0.5rem;
+        background-color: var(--white-ola);
+    }
+    .content {
+    }
+    .date {
+        text-align: right;
+    }
+    .
+
+</style>

@@ -6,20 +6,20 @@
 //     {params: {id: 'spot'}},
 //   ];
 // }
-const allPosts:Post[] = await fetch('http://localhost:8080/posts').then((res) => res.json());
+const allPosts:Post[] = await fetch('http://vic.hackclub.app/posts').then((res) => res.json());
 let postsArray: Array<Object> = []
   for (let p in allPosts) {
-	postsArray.push({params: {id: allPosts[p]._id.$oid}})
+	postsArray.push({params: {id: allPosts[p]._id}})
   }
 
 console.log({postsArray});
 export function getStaticPaths() {
-  let postsArray = allPosts.map((post) => ({ params: { id: post._id.$oid } }));
+  let postsArray = allPosts.map((post) => ({ params: { id: post._id } }));
 }
 const { id } = Astro.params;
 import ArticleLayout from "../../layouts/ArticleLayout.astro";
 import { type Post } from "../../types";
-const post: Post = await fetch(`http://localhost:8080/post/${id}`).then((res) => res.json());
+const post: Post = await fetch(`http://vic.hackclub.app/post/${id}`).then((res) => res.json());
 ---
 <ArticleLayout title= {"Post" + post.date}>
     <div>

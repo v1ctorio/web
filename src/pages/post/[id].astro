@@ -1,21 +1,11 @@
 ---
-// export function getStaticPaths() {
-//   return [
-//     {params: {dog: 'clifford'}},
-//     {params: {dog: 'rover'}},
-//     {params: {id: 'spot'}},
-//   ];
-// }
-const allPosts:Post[] = await fetch('http://vic.hackclub.app/posts').then((res) => res.json());
-let postsArray: Array<Object> = []
-  for (let p in allPosts) {
-	postsArray.push({params: {id: allPosts[p]._id}})
-  }
-
-console.log({postsArray});
-export function getStaticPaths() {
-  let postsArray = allPosts.map((post) => ({ params: { id: post._id } }));
-}
+ export function getStaticPaths() {
+   return [
+     {params: {dog: 'clifford'}},
+     {params: {dog: 'rover'}},
+     {params: {id: 'spot'}},
+   ];
+ }
 const { id } = Astro.params;
 import ArticleLayout from "../../layouts/ArticleLayout.astro";
 import { type Post } from "../../types";

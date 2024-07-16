@@ -13,3 +13,6 @@ I hope you like it :)))
 
 ![main page](https://github.com/user-attachments/assets/97b6d73d-0635-455e-9f8d-01b64cf8e71a)
 ![posts screenshot](https://github.com/user-attachments/assets/d4c0cb74-88cb-4873-a35e-37b5638dd39e)
+
+
+(YES, I do like that each card is on top of each other, it animates in hover, try it, i dont care, i like it)

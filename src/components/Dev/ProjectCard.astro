@@ -1,17 +1,22 @@
 ---
-const { title, description, link, img } = Astro.props;
+const { title, description, GHlink, img, VisitLink } = Astro.props;
 ---
 <div class="project">
     <h2>{title}</h2>
     <p>
     {description}
 </p>
+<div class="image-skeleton"></div>
     <img
     src={img}
+    class="hola"
     alt="Latest screenshot"
-    width="250px"
-    >    
-<a href={link}>GitHub</a>
+    loading="lazy" 
+    >   
+    <div class="links">        
+        {GHlink && <a href={GHlink}>Source</a>}
+        {VisitLink && <a href={VisitLink}>Visit</a>}
+    </div> 
 </div>
 <style>
     .project {
@@ -25,12 +30,16 @@ const { title, description, link, img } = Astro.props;
         border-radius: 10px;
         padding: 10px;
         width: 300px;
+        height: 400px;
     }
     .project * {
         padding: 10px;
     }
-    .project img {
+    .hola {
         border-radius: 10px;
+        width: 270px;
+        height: 210px;
+        object-fit: contain;
     }
     .project h2 {
         padding-top: 10px;
@@ -42,4 +51,50 @@ const { title, description, link, img } = Astro.props;
         text-decoration: none;
         color: rgb(2, 132, 199);
     }
+    .image-skeleton {
+    max-width: 250px;
+    height: 210px;
+    background-color: #e0e0e0;
+    animation: skeleton-loading 1.5s infinite linear;
+    }
+
+
+
+  @keyframes skeleton-loading {
+    0% {
+      background-color: #e0e0e0;
+    }
+    50% {
+      background-color: #f0f0f0;
+    }
+    100% {
+      background-color: #e0e0e0;
+    }
+  }
 </style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const images = document.querySelectorAll(".hola");
+
+  images.forEach((i) => {
+    const img = i as HTMLImageElement; // Cast to HTMLImageElement
+    // Check if the image is already loaded (cached)
+    if (img.complete) {
+      hideSkeleton(img); // Hide skeleton if image is already loaded
+    } else {
+      // If not cached, wait for the load event
+      img.addEventListener("load", function() {
+        hideSkeleton(img);
+      });
+    }
+  });
+
+  // Function to hide skeleton and show the image
+  function hideSkeleton(img: HTMLImageElement) {
+    if (!img) return;
+    (img as any).previousElementSibling.style.display = "none"; // Hide skeleton
+    img.style.opacity = "1"; // Show the image
+  }
+});
+
+</script>

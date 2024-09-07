@@ -23,17 +23,16 @@ import Layout from '../layouts/Layout.astro';
         description="Rest API of images of fumos (japanese plushies) using typescript and fastify."
         img="https://repository-images.githubusercontent.com/395606928/753b9fdd-b978-4b74-841e-f3973daf9129"
         GHlink="https://github.com/Nosesisaid/fumo-API"
+        Trylink="https://fumo-api.nosesisaid.com/"
         />
         <Card
         title="LIFX-Admin"
         description="Discord bot to control LIFX lights through Discord."
         img="https://github.com/v1ctorio/lifx-admin/blob/main/assets/login%20lifxbot.gif?raw=true"
         GHlink="https://github.com/v1ctorio/lifx-admin"
-        VisitLink="https://discord.com/oauth2/authorize?client_id=904669014658256937"
+        Installlink="https://discord.com/oauth2/authorize?client_id=904669014658256937"
 
         />
-    </div>
-    <div class="projects">
         <Card 
         title="Charta IM"
         description="A chat app with end-to-end encryption, using the matrix protocol."
@@ -43,7 +42,7 @@ import Layout from '../layouts/Layout.astro';
         <Card
         title="v1c.rocks"
         description="My personal website, made with Astro and awful css skills."
-        img="https://picsum.photos/250/150"
+        img="https://dl.nosesisaid.com/v1c.rocks.png"
         GHlink="https://v1c.rocks"
         />
         <Card
@@ -52,6 +51,11 @@ import Layout from '../layouts/Layout.astro';
         img="https://github.com/v1ctorio/frederick/raw/main/vhs/usage.gif"
         GHlink="https://github.com/v1ctorio/frederick"
         />
+        <Card 
+        title="Hackey"
+        description="Unofficial hackclub Sharkey instance, hosted in Nest."
+        img=""
+        Trylink="https://hk.dino.icu/"
     </div>
 		</div>
 	</main>
@@ -63,15 +67,21 @@ import Layout from '../layouts/Layout.astro';
 		text-decoration: line-through;
 	}
 	main {
-		margin-top: 60px;
-		justify-content: center;
-		flex-direction: column;
-		max-width: 65ch;
-		width: 100%;
-		display: flex;
-		margin-left: auto;
-		margin-right: auto;
-	}
+    margin-top: 60px;
+    max-width: 100%;
+    width: 90%;     
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1200px !important; 
+    padding: 20px;
+}
 	h1 {
 		padding: 10px 0px 10px 0px;
 		font-size: 50px;
@@ -85,11 +95,22 @@ import Layout from '../layouts/Layout.astro';
 		color: rgb(2, 132, 199);
 	}
     .projects {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
-        
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+
+    @media (min-width: 600px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
     }
+}
+
+@media (min-width: 900px) {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+}
 
 </style>

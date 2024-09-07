@@ -1,5 +1,5 @@
 ---
-const { title, description, GHlink, img, VisitLink } = Astro.props;
+const { title, description, GHlink, img, VisitLink, Installlink, Trylink } = Astro.props;
 ---
 <div class="project">
     <h2>{title}</h2>
@@ -7,15 +7,17 @@ const { title, description, GHlink, img, VisitLink } = Astro.props;
     {description}
 </p>
 <div class="image-skeleton"></div>
-    <img
+    {img && <img
     src={img}
     class="hola"
     alt="Latest screenshot"
     loading="lazy" 
-    >   
+    >   }
     <div class="links">        
         {GHlink && <a href={GHlink}>Source</a>}
         {VisitLink && <a href={VisitLink}>Visit</a>}
+        {Installlink && <a href={Installlink}>Install</a>}
+        {Trylink && <a href={Trylink}>Try</a>}
     </div> 
 </div>
 <style>
@@ -25,7 +27,7 @@ const { title, description, GHlink, img, VisitLink } = Astro.props;
         border-width: 10px;
         display: flex;
         flex-direction: column;
-		justify-content: center;
+		    justify-content: center;
         background-color: var(--white-ola);
         border-radius: 10px;
         padding: 10px;
@@ -40,6 +42,7 @@ const { title, description, GHlink, img, VisitLink } = Astro.props;
         width: 270px;
         height: 210px;
         object-fit: contain;
+        opacity: 0;
     }
     .project h2 {
         padding-top: 10px;
@@ -94,6 +97,10 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!img) return;
     (img as any).previousElementSibling.style.display = "none"; // Hide skeleton
     img.style.opacity = "1"; // Show the image
+  }
+
+  function showImage(img: HTMLImageElement) {
+    img.style.opacity = "1";
   }
 });
 

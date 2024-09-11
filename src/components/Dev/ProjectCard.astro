@@ -74,6 +74,15 @@ const { title, description, GHlink, img, VisitLink, Installlink, Trylink } = Ast
       background-color: #e0e0e0;
     }
   }
+
+  @media (prefers-color-scheme: dark) {
+    .project {
+      background-color: var(--dark-ola);
+    }
+    .project a {
+      color: rgb(2, 132, 199);
+    }
+  }
 </style>
 <script>
 document.addEventListener("DOMContentLoaded", function() {

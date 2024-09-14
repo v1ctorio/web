@@ -1,0 +1,1 @@
+I will never ever activley willingly retrieve any data of anyone using a service of mine by any reason. I would prefer killing myself rather than stealing someones data. Cloudflare gives me statistic on which countries my domain is accesed from and a (non reliable/mostly non human) number of requests to the domain. 

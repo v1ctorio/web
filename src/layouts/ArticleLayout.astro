@@ -7,10 +7,17 @@ const { frontmatter } = Astro.props;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{frontmatter.title}</title>
+    <meta name="og:type" content="article" />
+    <meta name="og:description" content={frontmatter.description} />
+    <meta name="og:title" content={frontmatter.title} />
+    <meta name="author" content={frontmatter.author} />
+    <meta property="article:published_time" content={frontmatter.pubDate} />
 </head>
 <body>
     <h1>{frontmatter.title}</h1>
-    <slot/>
+    <article>
+        <slot/>
+    </article>
     <author>{frontmatter.author}</author>
     <code><a href="/">cd ..</a></code>
 </body>

@@ -1,5 +1,5 @@
 ---
-const allPosts = await Astro.glob('../pages/articles/*.md');
+const allPosts = await Astro.glob('../pages/posts/*.md');
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -10,7 +10,7 @@ import Layout from '../layouts/Layout.astro';
 		<p>I'm Vic, I'm glad to see you here. I am a 16yo <span class="strike">human</span> fish who likes languages, tech, development and doing things with my life. </p>
 		<p>This is my personal website & blog, here you can find my public stuff (mostly about development). I use <a href="https://github.com/v1ctorio">GitHub</a>, <a href="https://bsky.app/profile/vicmd.bsky.social">BlueSky?????</a> and <a href="https://hk.dino.icu/@vic">Fedi(?)</a></p>
 		<div class="posts">
-			<h2>~/Articles</h2>
+			<h2>~/Posts</h2>
     <ul>
         {allPosts.map((post) => <li class="postI"><a href={post.url}>{post.frontmatter.title} - {post.frontmatter.pubDate}</a></li>)}
     </ul>

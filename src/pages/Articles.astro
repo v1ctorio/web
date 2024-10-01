@@ -1,12 +1,12 @@
 ---
-const allPosts = await Astro.glob('../pages/articles/*.md');
+const allPosts = await Astro.glob('../pages/posts/*.md');
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Vic. > ~/Articles">
+<Layout title="Vic. > ~/Posts">
 	<div>
 	<main>
-		<h1>~/Articles</h1>
+		<h1>~/Posts</h1>
     <ul>
         {allPosts.map((post) => <li class="postI"><a href={post.url}>{post.frontmatter.title} - {post.frontmatter.pubDate}</a></li>)}
     </ul>

@@ -75,12 +75,13 @@ import Layout from "../layouts/Layout.astro";
   main {
     margin-top: 60px;
     max-width: 100%;
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 60px;
   }
 
   body {
@@ -102,6 +103,10 @@ import Layout from "../layouts/Layout.astro";
   }
   .projects {
     padding-top: 30px;
+
+  }
+  .projects > div {
+    padding-top: 20px;
   }
 
   @media (min-width: 900px) {

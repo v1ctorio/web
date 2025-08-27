@@ -1,0 +1,138 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Vic. > ~/Hosts">
+  <main>
+    <div>
+      <h1>~/Hosts</h1>
+      <div class="hosts">
+        <h2 id="pavilion"> <a href="#pavilion">#</a> Pavilion</h2>
+        <p>HP Pavilion laptop, has accompanied me to all the hackathons I've gone to. </p>
+        <code class="neofetch">
+{`vic@pavilion ~> fastfetch
+                  -\`                     vic@pavilion
+                 .o+\`                    ------------
+                \`ooo/                    OS: Arch Linux x86_64
+               \`+oooo:                   Host: HP Pavilion Laptop 14-ec0xxx
+              \`+oooooo:                  Kernel: Linux 6.16.1-arch1-1
+              -+oooooo+:                 Uptime: 24 mins
+            \`/:-:++oooo+:                Packages: 1313 (pacman), 25 (nix-user), 52 (nix-default), 46 )
+           \`/++++/+++++++:               Shell: fish 4.0.2
+          \`/++++++++++++++:              Display (BOE09D1): 1920x1080 @ 60 Hz in 14" [Built-in]
+         \`/+++ooooooooooooo/\`            WM: Hyprland 0.50.1 (Wayland)
+        ./ooosssso++osssssso+\`           Cursor: Adwaita
+       .oossssso-\`\`\`\`/ossssss+\`          Terminal: kitty 0.42.2
+      -osssssso.      :ssssssso.         Terminal Font: JetBrainsMonoNF-Regular (11pt)
+     :osssssss/        osssso+++.        CPU: AMD Ryzen 7 5700U (16) @ 4.37 GHz
+    /ossssssss/        +ssssooo/-        GPU: AMD Lucienne [Integrated]
+  \`/ossssso+/:-        -:/+osssso+-      Memory: 7.76 GiB / 14.94 GiB (52%)
+ \`+sso+:-\`                 \`.-/+oso:     Swap: 0 B / 4.00 GiB (0%)
+\`++:.                           \`-/+/    Disk (/): 36.42 GiB / 45.96 GiB (79%) - ext4
+.\`                                 \`/    Disk (/home): 208.40 GiB / 421.13 GiB (49%) - ext4
+                                         Local IP (wlan0): 192.168.68.111/24
+                                         Battery (Primary): 99% [AC Connected]
+                                         Locale: en_US.UTF-8
+`}                          
+        </code>
+
+        <h2 id="magi"> <a href="#magi">#</a> MAGI</h2>
+        <p>Headless home server running on my living room. Mounted using refurbished Xeon components.</p>
+        <code class="neofetch">
+            {`root@magi:~# fastfetch
+         .://:\`              \`://:.             root@magi
+       \`hMMMMMMd/          /dMMMMMMh\`           ---------
+        \`sMMMMMMMd:      :mMMMMMMMs\`            OS: Proxmox VE bookworm 8.2.10 x86_64
+\`-/+oo+/:\`.yMMMMMMMh-  -hMMMMMMMy.\`:/+oo+/-\`    Kernel: Linux 6.8.12-4-pve
+\`:oooooooo/\`-hMMMMMMMyyMMMMMMMh-\`/oooooooo:\`    Uptime: 11 days, 6 hours, 45 mins
+  \`/oooooooo:\`:mMMMMMMMMMMMMm:\`:oooooooo/\`      Packages: 950 (dpkg)
+    ./ooooooo+- +NMMMMMMMMN+ -+ooooooo/.        Shell: bash 5.2.15
+      .+ooooooo+-\`oNMMMMNo\`-+ooooooo+.          Terminal: /dev/pts/0
+        -+ooooooo/.\`sMMs\`./ooooooo+-            CPU: Intel(R) Xeon(R) E5-2630 v4 (20) @ 3.10 GHz
+          :oooooooo/\`..\`/oooooooo:              Memory: 10.72 GiB / 15.52 GiB (69%)
+          :oooooooo/\`..\`/oooooooo:              Swap: 6.35 GiB / 8.00 GiB (79%)
+        -+ooooooo/.\`sMMs\`./ooooooo+-            Disk (/): 38.86 GiB / 93.93 GiB (41%) - ext4
+      .+ooooooo+-\`oNMMMMNo\`-+ooooooo+.          Disk (/mnt/pve/HARD): 576.49 GiB / 1.79 TiB (31%) - ext4
+    ./ooooooo+- +NMMMMMMMMN+ -+ooooooo/.        Local IP (vmbr0): 192.168.1.189/24
+  \`/oooooooo:\`:mMMMMMMMMMMMMm:\`:oooooooo/\`      Locale: en_US.UTF-8
+\`:oooooooo/\`-hMMMMMMMyyMMMMMMMh-\`/oooooooo:\`
+\`-/+oo+/:\`.yMMMMMMMh-  -hMMMMMMMy.\`:/+oo+/-\`                            
+        \`sMMMMMMMm:      :dMMMMMMMs\`                                    
+       \`hMMMMMMd/          /dMMMMMMh\`
+         \`://:\`              \`://:\`
+`}
+        </code>
+
+
+        <h2 id="nosesisaido"><a href="#nosesisaido">#</a> Nosesisaido</h2>
+        <p>Desktop host I built a few years ago. Currently running W*ndows 11.</p>
+        <h2 class="alum"><a href="#alum">#</a> Alum</h2>
+        <p>My first host, my middle school laptop featuring an Intel Celeron. Got me started into coding, right now running NixOS. I no longer use it as much in favor of Pavilion.</p>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .strike {
+    text-decoration: line-through;
+  }
+  main {
+    margin-top: 60px;
+    max-width: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  body {
+    margin: 0 auto;
+    max-width: 1200px !important;
+    padding: 20px;
+  }
+  .hosts {
+    padding: 10px;
+    margin-top: 20px;
+  }
+  h1 {
+    padding: 10px 0px 10px 0px;
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  p {
+    padding-top: 10px;
+  }
+
+  a {
+    text-decoration: none;
+	color: var(--dark-ola);
+	@media (prefers-color-scheme: dark) {
+        color: var(--white-ola);
+    }
+
+  }
+
+  ul {
+    line-height: 25px;
+  }
+  li {
+    margin-left: 30px;
+  }
+
+  .neofetch {
+    color: #c6d0f5;
+    background-color: #303446;
+    margin: 30px;
+    padding: 20px;
+    white-space: pre;
+    display: block;
+    overflow: auto;
+
+  }
+
+</style>

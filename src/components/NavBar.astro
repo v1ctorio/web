@@ -16,11 +16,15 @@ const links: Link[] = [
 
 <nav>
     <div class="navbar">
+
         <div class="links">
             <p class="logo">Vic</p>
+            <div class="links">
+
             {links.map((i)=> 
             <a class="link" href={i.url}>{i.name}</a>
             )}
+            </div>
         </div>
 
         <div class="socials">
@@ -103,4 +107,10 @@ nav {
             color: aliceblue;
         }
     }
+
+@media (max-width: 500px) {
+    .links {
+        flex-direction: column;
+    }
+}
 </style>

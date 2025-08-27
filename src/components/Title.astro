@@ -1,0 +1,15 @@
+<h1>¡Hola!</h1>
+
+
+
+<script>
+const title = document.querySelector("h1") as HTMLHeadElement;
+const interval = 1000
+let titles = ["¡Hola!", "Aupa!", "Bones!", "Hallo~","Hi there!"]
+let i = 0
+setInterval(() => {
+	title.textContent = titles[i]
+	if (i === titles.length-1) return i = 0
+	i++
+}, interval);
+</script>

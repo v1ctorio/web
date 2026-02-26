@@ -8,7 +8,11 @@ const links = [
     { label: "Neon", url: "https://saahild.com/" },
     { label: "Mahad", url: "https://mahadk.com/" },
     { label: "https://errorcodezero.dev/button.png", url: "https://errorcodezero.dev/" }
-].sort((a, b) => a.label.localeCompare(b.label));
+].sort((a, b) => {
+    const aIsUrl = a.label.startsWith("https://");
+    if (aIsUrl !== b.label.startsWith("https://")) return aIsUrl ? 1 : -1;
+    return a.label.localeCompare(b.label);
+});
 ---
 
 <Layout title="Vic. > ~">

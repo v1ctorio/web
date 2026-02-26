@@ -40,10 +40,10 @@ const links = [
                     </p>
 
                     <h2>Social links</h2>
-                    <ul>
+                    <ul id="sl">
                         {
                             links.map((i) => (
-                                <li>
+                                <li style="display: none;">
                                     <a href={i.url}>
                                         {i.label.startsWith("https://") ? (
                                             <img src={i.label} alt="Image" />
@@ -55,10 +55,42 @@ const links = [
                             ))
                         }
                     </ul>
+                    <noscript>
+                    <ul id="sl-noscript">
+                        {
+                            links.map((i) => (
+                                <li style="display: list-item;">
+                                    <a href={i.url}>
+                                        {i.label.startsWith("https://") ? (
+                                            <img src={i.label} alt="Image" />
+                                        ) : (
+                                            `${i.label}`
+                                        )}
+                                    </a>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                    </noscript>
                 </i>
             </p>
         </main>
 
+        <script>
+            const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+            const sls = document.querySelector("#sl")!!
+            const lis = sls.querySelectorAll("li")!!
+
+            for (let i = 0; i < lis.length; i++) {
+                const element = lis[i];
+                element.style.display = "list-item"
+                await sleep(1000)
+
+                
+            }
+            
+            
+        </script>
         <style>
             .strike {
                 text-decoration: line-through;
@@ -92,6 +124,10 @@ const links = [
             }
             h2 {
                 margin: 50px 0px 20px -10px;
+            }
+
+            li {
+                display: none;
             }
         </style>
     </div></Layout

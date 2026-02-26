@@ -7,6 +7,7 @@ const links = [
     { label: "Guac", url: "https://jschere.com/" },
     { label: "Neon", url: "https://saahild.com/" },
     { label: "Mahad", url: "https://mahadk.com/" },
+    { label: "https://errorcodezero.dev/button.png", url: "https://errorcodezero.dev/" }
 ].sort((a, b) => a.label.localeCompare(b.label));
 ---
 
@@ -78,18 +79,30 @@ const links = [
 
         <script>
             const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
-            const sls = document.querySelector("#sl")!!
-            const lis = sls.querySelectorAll("li")!!
 
-            for (let i = 0; i < lis.length; i++) {
-                const element = lis[i];
-                element.style.display = "list-item"
-                await sleep(1000)
-
-                
+            function waitForImage(imgElem: HTMLImageElement) {
+                return new Promise<void>(res => {
+                    if (imgElem.complete) return res();
+                    imgElem.onload = () => res();
+                    imgElem.onerror = () => res();
+                });
             }
-            
-            
+
+            (async () => {
+                const sls = document.querySelector("#sl")!;
+                const lis = sls.querySelectorAll("li");
+
+                await sleep(500)
+                for (let i = 0; i < lis.length; i++) {
+                    const element = lis[i];
+                    element.style.display = "list-item";
+
+                    const img = element.querySelector("img");
+                    if (img) await waitForImage(img);
+
+                    await sleep(200);
+                }
+            })();
         </script>
         <style>
             .strike {
@@ -125,9 +138,13 @@ const links = [
             h2 {
                 margin: 50px 0px 20px -10px;
             }
-
             li {
-                display: none;
+                height: 30px;
+                line-height: 30px;
+            }
+            li img {
+                display: inline-block;
+                vertical-align: middle;
             }
         </style>
     </div></Layout

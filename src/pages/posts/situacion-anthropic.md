@@ -19,7 +19,7 @@ En dicha declaración se abordan explícitamente dos casos concretos en los que 
 
 
 ### La carta
-El mismo día, se hace pública la *open letter* ["*We Will Not Be Divided*"](https://notdivided.org/) ("*No seremos divididos*"). En ella, cientos de empleados de Google y OpenAI, competidores directos de Anthropic en el mercado de la IA, declaran su apoyo a Anthropic en la situación.
+El mismo día, se hace pública la *open letter* *["We Will Not Be Divided"](https://notdivided.org/)* ("*No seremos divididos*"). En ella, cientos de empleados de Google y OpenAI, competidores directos de Anthropic en el mercado de la IA, declaran su apoyo a Anthropic en la situación.
 
 ### Respuesta del gobierno estadounidense
 

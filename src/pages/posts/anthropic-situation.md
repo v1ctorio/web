@@ -20,7 +20,7 @@ In said statement, they explicitly address two concrete use cases in which they 
 
 
 ### The open letter
-The same day, the ["We Will Not Be Divided"](https://notdivided.org/) open letter is made public. In it, hundreds of Google and OpenAI employees declare their support to Anthropic.
+The same day, the ["We Will Not Be Divided"](https://notdivided.org/) open letter is made public. In it, hundreds of both Google and OpenAI employees, direct anthropic competitors in the AI market, declare their support to Anthropic.
 
 
 ### Response from the US government
@@ -29,4 +29,4 @@ On the next day, 27, the White House twitter account and Donald Trump (POTUS) ma
 
 
 
-The same day, at 22:14 UTC, Pete Hegseth (US Secretary of War) makes [a post](https://xcancel.com/SecWar/status/2027507717469049070) calling out Anthropic for trying to "veto power over the operational decisions of the United States military" and designates Anthropic as a Supply-Chain Risk to National Security.
+The same day, at 22:14 UTC, Pete Hegseth (US Secretary of War) makes [a post](https://xcancel.com/SecWar/status/2027507717469049070) calling out Anthropic for trying to "veto power over the operational decisions of the United States military" and plans to designate Anthropic as a Supply-Chain Risk to National Security.

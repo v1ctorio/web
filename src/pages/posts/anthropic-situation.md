@@ -11,7 +11,7 @@ tags: []
 
 At 2026-02-26 21:55 UTC, Anthropic releases a [public statement](https://www.anthropic.com/news/statement-department-of-war) in which they speak out regarding the demands of the US Department Of War.
 
-In said statement, they address two concrete use cases in which they deny to provide their technology:
+In said statement, they explicitly address two concrete use cases in which they deny to provide their technology:
 
 - **Mass domestic surveillance**. They don't want their products being using to patrol USA citizens and acknowledge that their services could be used to easily arbitrarily profile any citizens data without the need of a warrant.
 

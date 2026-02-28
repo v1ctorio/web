@@ -23,7 +23,7 @@ In said statement, they explicitly address two concrete use cases in which they 
 The same day, the ["We Will Not Be Divided"](https://notdivided.org/) open letter is made public. In it, hundreds of Google and OpenAI employees declare their support to Anthropic.
 
 
-### Response from the US
+### Response from the US government
 On the next day, 27, the White House twitter account and Donald Trump (POTUS) make [a post](https://xcancel.com/WhiteHouse/status/2027497719678255148) directing all USA federal agencies to stop using Anthropic's product in a six month period and threaten Anthropic with "major civil and criminal consequences" if they are not supportive during the transition period.
 
 

@@ -24,7 +24,7 @@ El mismo día, se hace pública la *open letter* ["*We Will Not Be Divided*"](ht
 
 ### Respuesta del gobierno estadounidense
 
-Al día siguiente, el 27, la cuenta de Twitter de la Casa Blanca y Donald Trump (POTUS) hacen [una publicación](https://xcancel.com/WhiteHouse/status/2027497719678255148) ordenando a todas las agencias federales estadounidenses a dejar de usar el producto de Anthropic en un período de seis meses y amenazan a Anthropic con "graves consecuencias civiles y penales" si no cooperan durante el período de transición a otras tecnologías.
+Al día siguiente, el 27, la cuenta de Twitter de la Casa Blanca y Donald Trump (POTUS) hacen [una publicación](https://xcancel.com/WhiteHouse/status/2027497719678255148) ordenando a todas las agencias federales estadounidenses a dejar de usar los servicios de Anthropic en un período de seis meses y amenazan a Anthropic con "graves consecuencias civiles y penales" si no cooperan durante el período de transición a otras tecnologías.
 
 
 

@@ -24,7 +24,7 @@ The same day, the ["We Will Not Be Divided"](https://notdivided.org/) open lette
 
 
 ### Response from the US
-On the next day, 27 of may the White House twitter account and Donald Trump (POTUS) make [a post](https://xcancel.com/WhiteHouse/status/2027497719678255148) directing all USA federal agencies to stop using Anthropic's product in a six month period and threaten Anthropic with "major civil and criminal consequences" if they are not supportive during the transition period.
+On the next day, 27, the White House twitter account and Donald Trump (POTUS) make [a post](https://xcancel.com/WhiteHouse/status/2027497719678255148) directing all USA federal agencies to stop using Anthropic's product in a six month period and threaten Anthropic with "major civil and criminal consequences" if they are not supportive during the transition period.
 
 
 

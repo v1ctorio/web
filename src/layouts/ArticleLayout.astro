@@ -1,97 +1,110 @@
 ---
 const { frontmatter } = Astro.props;
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{frontmatter.title}</title>
     <meta name="og:type" content="article" />
     <meta name="og:description" content={frontmatter.description} />
     <meta name="og:title" content={frontmatter.title} />
     <meta name="author" content={frontmatter.author} />
     <meta property="article:published_time" content={frontmatter.pubDate} />
-</head>
-<body>
+  </head>
+  <body>
     <h1>{frontmatter.title}</h1>
     <article>
-        <slot/>
+      <slot />
     </article>
     <author>{frontmatter.author}</author>
     <code class="cddotdot"><a href="/">cd ..</a></code>
-</body>
-<style>
+  </body>
+  <style is:global>
     code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-        font-size: 0.9em;
-        background-color: var(--white-ola);
-        padding: 5px;
-        border-radius: 5px;
-        display: inline-block;
-
-	}
+      font-family:
+        Menlo,
+        Monaco,
+        Lucida Console,
+        Liberation Mono,
+        DejaVu Sans Mono,
+        Bitstream Vera Sans Mono,
+        Courier New,
+        monospace;
+      font-size: 0.9em;
+      background-color: var(--white-ola);
+      padding: 5px;
+      border-radius: 5px;
+      display: inline-block;
+    }
     a {
-        letter-spacing: -1.5px;
-        text-decoration: none;
+      color: rgb(2, 132, 199);
+    }
+
+    a:visited {
+      color: rgb(72, 84, 255);
     }
     h1 {
-        font-size: 2em;
+      font-size: 2em;
     }
     body {
-        margin: 0 auto;
-        max-width: 800px;
-        padding: 20px;
-        background-color: var(--background);
-    } 
+      margin: 0 auto;
+      max-width: 800px;
+      padding: 20px;
+      background-color: var(--background);
+    }
+
+    article {
+        line-height: 1.8;
+        font-size: 1.1em;
+    }
 
     author {
-        font-size: 0.8em;
-        color: #666;
-        display: block;
-        margin-top: 2em;
-        margin-bottom: 1em;
-        margin-left: 0;
-        margin-right: 0;
+      font-size: 0.8em;
+      color: #666;
+      display: block;
+      margin-top: 2em;
+      margin-bottom: 1em;
+      margin-left: 0;
+      margin-right: 0;
     }
 
     :root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-		--nssisid-white: #e8e4ec;
-		--nssisid-black: #181414;
-		--white-ola: #f0eef1;
-		--dark-ola: #313236;
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: var(--nssisid-white);
-		color: var(--nssisid-black);
-		background-size: 224px;
-	}
-	@media (prefers-color-scheme: dark) {
-		html {
-			background: var(--nssisid-black);
-			color: var(--nssisid-white);
-		}
-        code {
-            background-color: var(--dark-ola);
-        }
-	}
-</style>
+      --accent: 136, 58, 234;
+      --accent-light: 224, 204, 250;
+      --accent-dark: 49, 10, 101;
+      --accent-gradient: linear-gradient(
+        45deg,
+        rgb(var(--accent)),
+        rgb(var(--accent-light)) 30%,
+        white 60%
+      );
+      --nssisid-white: #e8e4ec;
+      --nssisid-black: #181414;
+      --white-ola: #f0eef1;
+      --dark-ola: #313236;
+    }
+    html {
+      font-family: system-ui, sans-serif;
+      background: var(--nssisid-white);
+      color: var(--nssisid-black);
+      background-size: 224px;
+    }
+    @media (prefers-color-scheme: dark) {
+      html {
+        background: var(--nssisid-black);
+        color: var(--nssisid-white);
+      }
+      code {
+        background-color: var(--dark-ola);
+      }
+      
+    }
+    .cddotdot a {
+        text-decoration: none;
+        color: red;
+    }
+  </style>
 </html>

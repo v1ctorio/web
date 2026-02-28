@@ -22,7 +22,7 @@ const { frontmatter } = Astro.props;
     <author>{frontmatter.author}</author>
     <code class="cddotdot"><a href="/">cd ..</a></code>
   </body>
-  <style is:global>
+  <style>
     code {
       font-family:
         Menlo,
@@ -39,11 +39,11 @@ const { frontmatter } = Astro.props;
       border-radius: 5px;
       display: inline-block;
     }
-    a {
+    article :global(a) {
       color: rgb(2, 132, 199);
     }
 
-    a:visited {
+    article :global(a:visited) {
       color: rgb(72, 84, 255);
     }
     h1 {

@@ -8,7 +8,6 @@ tags: []
 lang: 'es'
 ---
 
-### The Anthropic statement
 
 El 26 de febrero de 2026 a las 21:55 UTC, Anthropic, empresa pionera en IA conocida por ser la creadora de Claude/Claude Code publica una [declaración](https://www.anthropic.com/news/statement-department-of-war) en la que se pronuncia sobre las exigencias del Departamento de Guerra estadounidense.
 

@@ -6,7 +6,7 @@ description: 'Empresas estadounidenses de IA se niegan a proporcionar ciertos se
 author: 'Vic'
 tags: []
 lang: 'es'
-thumbanil: '/assets/posts/declaracion-anthropic.jpg'
+thumbanil: 'https://v1c.rocks/assets/declaracion-anthropic.jpg'
 ---
 
 

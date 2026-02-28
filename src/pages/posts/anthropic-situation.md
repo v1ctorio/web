@@ -2,7 +2,7 @@
 layout: ../../layouts/ArticleLayout.astro
 title: 'In case you are not aware of the Anthropic situation'
 pubDate: 27-02-2026
-description: 'The closed system and cheap manofactouring of mobile devices make them useless devices in record time. Originally t.me/vicequisd/113'
+description: 'US AI companies refuse to provide certain services to the US Department of War'
 author: 'Vic'
 tags: []
 ---

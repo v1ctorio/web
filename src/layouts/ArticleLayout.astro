@@ -12,6 +12,7 @@ const { frontmatter } = Astro.props;
     <meta name="og:description" content={frontmatter.description} />
     <meta name="og:title" content={frontmatter.title} />
     <meta name="author" content={frontmatter.author} />
+    {frontmatter.thumbanil && <meta name="og:image" content={frontmatter.thumbanil} />}
     <meta property="article:published_time" content={frontmatter.pubDate} />
   </head>
   <body>

@@ -8,33 +8,44 @@ import Layout from "../layouts/Layout.astro";
       <h1>~/Hosts</h1>
       <div class="hosts">
         <h2 id="pavilion"> <a href="#pavilion">#</a> Pavilion</h2>
-        <p>HP Pavilion laptop, has accompanied me to all the hackathons I've gone to. </p>
-        <code class="neofetch">
-{`vic@pavilion ~> fastfetch
+        <p>
+          HP Pavilion laptop, has accompanied me to all the hackathons I've gone to.
+          <span class="screenshot-tooltip">
+            <a href="http://profile.vic.wf/hosts/pavilion.png" target="_blank">[Screenshot]</a>
+            <img
+              src="http://profile.vic.wf/hosts/pavilion.png"
+              alt="HP Pavilion screenshot"
+              class="tooltip-image"
+              loading="lazy"
+            />
+          </span>
+        </p>
+          <code class="neofetch">
+{`vic@pavilion ~ > fastfetch
                   -\`                     vic@pavilion
                  .o+\`                    ------------
                 \`ooo/                    OS: Arch Linux x86_64
                \`+oooo:                   Host: HP Pavilion Laptop 14-ec0xxx
-              \`+oooooo:                  Kernel: Linux 6.16.1-arch1-1
-              -+oooooo+:                 Uptime: 24 mins
-            \`/:-:++oooo+:                Packages: 1313 (pacman), 25 (nix-user), 52 (nix-default), 46 )
-           \`/++++/+++++++:               Shell: fish 4.0.2
-          \`/++++++++++++++:              Display (BOE09D1): 1920x1080 @ 60 Hz in 14" [Built-in]
-         \`/+++ooooooooooooo/\`            WM: Hyprland 0.50.1 (Wayland)
-        ./ooosssso++osssssso+\`           Cursor: Adwaita
-       .oossssso-\`\`\`\`/ossssss+\`          Terminal: kitty 0.42.2
-      -osssssso.      :ssssssso.         Terminal Font: JetBrainsMonoNF-Regular (11pt)
-     :osssssss/        osssso+++.        CPU: AMD Ryzen 7 5700U (16) @ 4.37 GHz
-    /ossssssss/        +ssssooo/-        GPU: AMD Lucienne [Integrated]
-  \`/ossssso+/:-        -:/+osssso+-      Memory: 7.76 GiB / 14.94 GiB (52%)
- \`+sso+:-\`                 \`.-/+oso:     Swap: 0 B / 4.00 GiB (0%)
-\`++:.                           \`-/+/    Disk (/): 36.42 GiB / 45.96 GiB (79%) - ext4
-.\`                                 \`/    Disk (/home): 208.40 GiB / 421.13 GiB (49%) - ext4
-                                         Local IP (wlan0): 192.168.68.111/24
-                                         Battery (Primary): 99% [AC Connected]
-                                         Locale: en_US.UTF-8
-`}                          
-        </code>
+              \`+oooooo:                  Kernel: Linux 6.19.10-arch1-1
+              -+oooooo+:                 Uptime: 2 hours, 30 mins
+            \`/:-:++oooo+:                Packages: 1517 (pacman), 52 (nix-default), 51 (flatpak)
+           \`/++++/+++++++:               Shell: fish 4.5.0
+          \`/++++++++++++++:              Display (BOE09D1): 1920x1080 in 14", 60 Hz [Built-in]
+         \`/+++ooooooooooooo/\`            DE: sway:wlroots
+        ./ooosssso++osssssso+\`           WM: Sway 1.11 (Wayland)
+       .oossssso-\`\`\`\`/ossssss+\`          Cursor: Adwaita
+      -osssssso.      :ssssssso.         Terminal: kitty 0.46.2
+     :osssssss/        osssso+++.        Terminal Font: NotoSansMono-Regular (12pt)
+    /ossssssss/        +ssssooo/-        CPU: AMD Ryzen 7 5700U (16) @ 4.37 GHz
+  \`/ossssso+/:-        -:/+osssso+-      GPU: AMD Lucienne [Integrated]
+ \`+sso+:-\`                 \`.-/+oso:     Memory: 7.16 GiB / 14.94 GiB (48%)
+\`++:.                           \`-/+/    Swap: 563.97 MiB / 4.00 GiB (14%)
+.\`                                 \`/    Disk (/): 29.95 GiB / 45.96 GiB (65%) - ext4
+                                         Disk (/home): 276.16 GiB / 421.13 GiB (66%) - ext4
+                                         Local IP (wlan0): 192.168.68.115/24
+                                         Battery (Primary): 69% [Discharging]
+                                         Locale: en_US.UTF-8`}
+          </code>
 
         <h2 id="magi"> <a href="#magi">#</a> MAGI</h2>
         <p>Headless home server running on my living room. Mounted using refurbished Xeon components.</p>
@@ -65,7 +76,15 @@ import Layout from "../layouts/Layout.astro";
 
 
         <h2 id="nosesisaido"><a href="#nosesisaido">#</a> Nosesisaido</h2>
-        <p>Desktop host I built a few years ago. Currently running W*ndows 11.</p>
+        <p>Desktop host I built a few years ago. No longer running Windows 11. <span class="screenshot-tooltip">
+            <a href="http://profile.vic.wf/hosts/nosesisaido.png" target="_blank">[Screenshot]</a>
+            <img
+              src="http://profile.vic.wf/hosts/nosesisaido.png"
+              alt="Nosesisaido screenshot"
+              class="tooltip-image tooltip-top"
+              loading="lazy"
+            />
+          </span></p>
         <h2 class="alum"><a href="#alum">#</a> Alum</h2>
         <p>My first host, my middle school laptop featuring an Intel Celeron. Got me started into coding, right now running NixOS. I no longer use it as much in favor of Pavilion.</p>
       </div>
@@ -96,6 +115,12 @@ import Layout from "../layouts/Layout.astro";
   .hosts {
     padding: 10px;
     margin-top: 20px;
+  }
+  .hosts > p {
+    padding-bottom: 20px;
+  }
+  .hosts > h2 {
+    padding-top: 20px;
   }
   h1 {
     padding: 10px 0px 10px 0px;
@@ -133,6 +158,37 @@ import Layout from "../layouts/Layout.astro";
     display: block;
     overflow: auto;
 
+  }
+
+  .screenshot-tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltip-image {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 8px);
+    width: min(420px, 80vw);
+    border-radius: 6px;
+    border: 1px solid #303446;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    background: #fff;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+    z-index: 20;
+  }
+  .tooltip-top {
+    bottom: calc(100% + 8px);
+    top:auto;
+  }
+
+  .screenshot-tooltip:hover .tooltip-image,
+  .screenshot-tooltip:focus-within .tooltip-image {
+    opacity: 1;
+    visibility: visible;
   }
 
 
